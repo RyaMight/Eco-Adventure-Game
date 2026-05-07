@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://pvy6rvo418ib"]
+
+[ext_resource type="Script" uid="uid://b5dis10uk6hux" path="res://scenes/anorganik.gd" id="1_f2rbv"]
+[ext_resource type="Texture2D" uid="uid://c1aqrp2ra24v3" path="res://art/objects/Screenshot_2026-04-13_205159-removebg-preview.png" id="1_rg1sp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rg1sp"]
+radius = 14.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2rbv"]
+size = Vector2(16, 16)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_f2rbv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.16549297, 0.20625004)
+texture = ExtResource("1_rg1sp")
+
+[node name="detect" type="Area2D" parent="."]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect"]
+shape = SubResource("CircleShape2D_rg1sp")
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("RectangleShape2D_f2rbv")
+
+[connection signal="body_entered" from="detect" to="." method="_on_detect_body_entered"]
+[connection signal="body_exited" from="detect" to="." method="_on_detect_body_exited"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="hitbox" to="." method="_on_hitbox_body_exited"]

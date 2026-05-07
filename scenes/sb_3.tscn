@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://drk1p5ij2vtn6"]
+
+[ext_resource type="Script" uid="uid://rriyjwxegpte" path="res://sb_3.gd" id="1_stilw"]
+[ext_resource type="Texture2D" uid="uid://cgw6cc7x13dnu" path="res://art/objects/Screenshot_2026-04-13_205208-removebg-preview.png" id="2_nm74h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_stilw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nm74h"]
+size = Vector2(11, 15)
+
+[node name="sb_3" type="CharacterBody2D"]
+script = ExtResource("1_stilw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.16203704, 0.14802633)
+texture = ExtResource("2_nm74h")
+
+[node name="detect" type="Area2D" parent="."]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect"]
+shape = SubResource("CircleShape2D_stilw")
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("RectangleShape2D_nm74h")
+
+[connection signal="body_entered" from="detect" to="." method="_on_detect_body_entered"]
+[connection signal="body_exited" from="detect" to="." method="_on_detect_body_exited"]

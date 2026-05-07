@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7cfvwen6an73"]
+
+[ext_resource type="Texture2D" uid="uid://diqxqrcu33y0y" path="res://art/objects/Screenshot_2026-04-13_205226-removebg-preview.png" id="1_rimpq"]
+
+[sub_resource type="GDScript" id="GDScript_rimpq"]
+script/source = "extends StaticBody2D
+
+var tarik_radius = 40  # Sesuaikan jarak tarikan
+
+func _physics_process(delta):
+	var semua_sampah = get_tree().get_nodes_in_group(\"sampah_anorganik\")
+	for sampah in semua_sampah:
+		var jarak = position.distance_to(sampah.position)
+		if jarak < tarik_radius:
+			sampah.position += (position - sampah.position) * delta * 3
+			if jarak < 10:
+				sampah.take_damage(10)
+
+
+func _on_deteksi_area_exited(area: Area2D) -> void:
+	pass # Replace with function body.
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlg2h"]
+size = Vector2(13, 13.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rimpq"]
+size = Vector2(13.03125, 19.75)
+
+[node name="anorganic" type="StaticBody2D"]
+collision_layer = 5
+collision_mask = 5
+script = SubResource("GDScript_rimpq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.7890625, -0.34374985)
+scale = Vector2(0.15351564, 0.15066963)
+texture = ExtResource("1_rimpq")
+region_enabled = true
+region_rect = Rect2(3, 1, 112, 152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_jlg2h")
+
+[node name="Deteksi" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deteksi"]
+position = Vector2(-0.515625, 0)
+shape = SubResource("RectangleShape2D_rimpq")
+
+[connection signal="area_entered" from="Deteksi" to="." method="_on_area_deteksi_area_entered"]
+[connection signal="area_exited" from="Deteksi" to="." method="_on_deteksi_area_exited"]
