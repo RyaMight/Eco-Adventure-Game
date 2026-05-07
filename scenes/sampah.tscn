@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://gkwd5ga1hyqt"]
 
-[ext_resource type="Script" uid="uid://dmugi21wnvele" path="res://sampah.gd" id="1_rpkmx"]
+[ext_resource type="Script" uid="uid://dmugi21wnvele" path="res://scripts/sampah.gd" id="1_rpkmx"]
 
 [node name="sampah" type="Area2D"]
 script = ExtResource("1_rpkmx")

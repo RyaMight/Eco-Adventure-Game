@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxenjy705hg8s"]
 
-[ext_resource type="Script" uid="uid://hievyjoy83kb" path="res://organik.gd" id="1_kic8n"]
+[ext_resource type="Script" uid="uid://hievyjoy83kb" path="res://scripts/organik.gd" id="1_kic8n"]
 [ext_resource type="Texture2D" uid="uid://bdwefiguli57k" path="res://art/objects/Screenshot_2026-04-13_144935-removebg-preview.png" id="2_kic8n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j3cno"]

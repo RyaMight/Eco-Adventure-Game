@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://gd7vs4v6cjhq"]
+[gd_scene load_steps=14 format=3 uid="uid://gd7vs4v6cjhq"]
 
-[ext_resource type="Script" uid="uid://dey7ex6mqekv4" path="res://coming_soon.gd" id="1_p463o"]
+[ext_resource type="Script" uid="uid://dey7ex6mqekv4" path="res://scripts/coming_soon.gd" id="1_p463o"]
 [ext_resource type="Texture2D" uid="uid://cecu7ciqxyuod" path="res://art/tilesets/plains.png" id="2_3e2dn"]
 [ext_resource type="FontFile" uid="uid://c5vkn3y72a6di" path="res://art/font/VCR_OSD_MONO_1.001.ttf" id="2_akidv"]
 [ext_resource type="Texture2D" uid="uid://cvbn4nbavsfun" path="res://art/objects/objects.png" id="3_75nuk"]
 [ext_resource type="Texture2D" uid="uid://byax8cn33lal6" path="res://art/characters/slime.png" id="4_mg78f"]
 [ext_resource type="Texture2D" uid="uid://d1qs0hhy6cucy" path="res://art/characters/player.png" id="5_akidv"]
+[ext_resource type="Texture2D" uid="uid://baa1icgfj4plb" path="res://art/characters/Himmel Sang Pahlawan (1).png" id="7_x3ive"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mg78f"]
 texture = ExtResource("2_3e2dn")
@@ -678,11 +679,23 @@ texture = ExtResource("5_akidv")
 7:29/0 = 0
 8:29/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pqksw"]
+texture = ExtResource("7_x3ive")
+2:1/0 = 0
+3:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_x3ive"]
 sources/0 = SubResource("TileSetAtlasSource_mg78f")
 sources/1 = SubResource("TileSetAtlasSource_akidv")
 sources/2 = SubResource("TileSetAtlasSource_x3ive")
 sources/3 = SubResource("TileSetAtlasSource_03vv6")
+sources/4 = SubResource("TileSetAtlasSource_pqksw")
 
 [node name="lose_scene" type="Control"]
 layout_mode = 3
@@ -704,7 +717,7 @@ offset_top = 57.0
 offset_right = 251.0
 offset_bottom = 81.0
 theme_override_fonts/font = ExtResource("2_akidv")
-text = "SKILL ISSUE DAWG😂"
+text = "SKILL ISSUE DAWG😹"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1

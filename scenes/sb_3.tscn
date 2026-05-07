@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://drk1p5ij2vtn6"]
 
-[ext_resource type="Script" uid="uid://rriyjwxegpte" path="res://sb_3.gd" id="1_stilw"]
+[ext_resource type="Script" uid="uid://rriyjwxegpte" path="res://scripts/sb_3.gd" id="1_stilw"]
 [ext_resource type="Texture2D" uid="uid://cgw6cc7x13dnu" path="res://art/objects/Screenshot_2026-04-13_205208-removebg-preview.png" id="2_nm74h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_stilw"]
