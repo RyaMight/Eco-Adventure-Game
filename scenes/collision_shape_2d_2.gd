@@ -11,4 +11,4 @@ func _process(delta: float) -> void:
 	pass
 
 func _clear():
-	if organik
+	pass
