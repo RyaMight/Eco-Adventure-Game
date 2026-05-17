@@ -113,7 +113,6 @@ func update_health():
 		healthbar.visible = true
 
 
-
 func _on_timer_timeout() -> void:
 	if health < 100:
 		health = health + 20
