@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7uauk6j0rp6l"
+path="res://.godot/imported/Lanterns of Jade.mp3-f932375f30be2711d655922e7df370ed.mp3str"
+
+[deps]
+
+source_file="res://music/Lanterns of Jade.mp3"
+dest_files=["res://.godot/imported/Lanterns of Jade.mp3-f932375f30be2711d655922e7df370ed.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

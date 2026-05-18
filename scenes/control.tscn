@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://byax8cn33lal6" path="res://art/characters/slime.png" id="8_exs80"]
 [ext_resource type="Texture2D" uid="uid://c1aqrp2ra24v3" path="res://art/objects/Screenshot_2026-04-13_205159-removebg-preview.png" id="9_kql7n"]
 [ext_resource type="Texture2D" uid="uid://bdwefiguli57k" path="res://art/objects/Screenshot_2026-04-13_144935-removebg-preview.png" id="10_tac8f"]
-[ext_resource type="AudioStream" uid="uid://4wdhwk5v1stf" path="res://music/Pinewood Riddle.mp3" id="11_exs80"]
+[ext_resource type="AudioStream" uid="uid://b7uauk6j0rp6l" path="res://music/Lanterns of Jade.mp3" id="11_exs80"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lt2xq"]
 texture = ExtResource("3_lpubu")
